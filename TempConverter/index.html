@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulisher", sans-serif;
+  }
+  body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: grid;
+    place-items: center;
+  }
+  form{
+    background-color: #fab1a0;
+    padding: 80px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+
+  }
+  #tempCalc label{
+    font-size: 30px;
+  }
+  #temp{
+    border: none;
+    padding: 10px;
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  #temp_diff{
+    height: 40px;
+    border: none;
+    margin-top: 20px;
+    font-size: 15px;
+    vertical-align: top;
+  }
+  [type="submit"]{
+    height: 35px;
+    margin: 20px;
+    width: 100px;
+    font-size: 15px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+  }
+  #resultContainer{
+    font-size: 35px;
+  }
+</style>
+<body>
+  <form id ="tempCalc" onsubmit="calc(); return false;">
+  <label for="temp">Please Enter the temparature</label><br>
+  <input type="number" name="temp" id="temp">
+  <select name="temp_diff" id="temp_diff">
+    <option value="cel">Celicius</option>
+    <option value="fah">Fahrenheit</option>
+  </select><br>
+  <input type="submit" name="temp"><br>
+  <span id="resultContainer"></span>
+  </form>
+</body>
+<script>
+  const calc=()=>{
+     const numbertemp=document.getElementById("temp").value;
+     const temp=document.getElementById("temp_diff").value;
+     
+    const celToFah=(cel)=>{
+      let fah=Math.round((cel * 9/5)+32)
+      return fah;
+    }
+    const fahToCel=(fah)=>{
+      let cel=Math.round((fah -32)* 5/9)
+      return cel;
+    }
+
+
+     let result;
+     if (temp=="cel"){
+      result=celToFah(numbertemp);
+      document.getElementById("resultContainer").innerHTML=`${result}Fahrenheit`;
+     }else{
+      result=fahToCel(numbertemp);
+      document.getElementById("resultContainer").innerHTML=`${result}Celcius`;
+     }
+
+
+  }
+</script>
+</html>
