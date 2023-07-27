@@ -16,17 +16,18 @@
   body{
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: grey;
     display: grid;
     place-items: center;
   }
   form{
     background-color: #fab1a0;
-    padding: 30px;
+    padding: 100px;
     width: 50%;
     margin: auto;
     text-align: center;
     border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
   }
   #tempCalc label{
@@ -35,34 +36,143 @@
   #tempCalc a{
     font-size: 20px;
   }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    
+    text-align: left;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .button {
+    
+    padding: 5px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  
+  .button5:hover {
+    background-color: #555555;
+    color: white;
+  }
  
   
   
 </style>
 <body>
-  <form id ="tempCalc" onsubmit="calc(); return false;">
+  <form>
+    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">JS Projects</h1><br>
+    <table>
+      <tr>
+        <td>AgeCalculator</td>
+        <td><button class="button button5" type="submit" formaction="AgeCalculator\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>AlarmClock</td>
+        <td><button class="button button5" type="submit" formaction="AlarmClock/index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>AnalogClock</td>
+        <td><button class="button button5" type="submit" formaction="AnalogClock\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>BmiCalculator</td>
+        <td><button class="button button5" type="submit" formaction="BmiCalculator\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>DigitalClock</td>
+        <td><button class="button button5" type="submit" formaction="DigitalClock\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>SimpleCalc</td>
+        <td><button class="button button5" type="submit" formaction="SimpleCalc\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>Stopwatch</td>
+        <td><button class="button button5" type="submit" formaction="Stopwatch\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>TipCalc</td>
+        <td><button class="button button5" type="submit" formaction="TipCalc\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>TodoApp</td>
+        <td><button class="button button5" type="submit" formaction="TodoApp\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>GoogleNotes</td>
+        <td><button class="button button5" type="submit" formaction="GoogleNotes\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>Jokes</td>
+        <td><button class="button button5" type="submit" formaction="Jokes\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>LightOnOff</td>
+        <td><button class="button button5" type="submit" formaction="LightOnOff\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>TempConverter</td>
+        <td><button class="button button5" type="submit" formaction="TempConverter\index.html">View</button></td>
+      </tr>
+      <tr>
+        <td>CountryAPI</td>
+        <td><button class="button button5" type="submit" formaction="CountryAPI\index.html">View</button></td>
+      </tr>
+      
 
-    <!-- <label for="temp">GoogleNotes Project</label> -->
+    
+      
+    </table>
+  </form>
 
+
+
+
+
+
+
+
+
+  <!-- <form>
+    <center><h1>Js Projects</h1></center><br>
+    <div>
+
+   
     <a href="GoogleNotes\index.html">GoogleNotes Project</a> <br> <br>
-    <!-- <label for="temp">Jokes Project</label> -->
-
+    
     <a href="Jokes\index.html">Jokes Project</a><br><br>
 
-    <!-- <label for="temp">LightsOnOff Project</label> -->
-
-    <a href="LightsOnOff\index.html">LightsOnOff Project</a><br><br>
+    
+    <a href="LightOnOff\index.html">LightsOnOff Project</a><br><br>
 
 
     <a href="TempConverter\index.html">TempConverter Project</a><br><br>
 
 
-    <!-- <label for="temp">CountryAPI Project</label> -->
-
+    
+    
     <a href="CountryAPI\index.html">CountryAPI Project</a>
+    </div>
+    <div>
+      
+    </div> -->
   
-  
-  </form>
+  <!-- </form> -->
 </body>
 
 </html>
